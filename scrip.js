@@ -68,8 +68,8 @@ const  countDown = () => {
     document.getElementById('main-hour').innerHTML = `${timeHours - 1}`;
     document.getElementById('back-up-hour').innerHTML = `${timeHours - 1}`;
     if(timeHours === 0){
-        document.getElementById('main-hour').innerHTML = `${24}`;
-        document.getElementById('back-up-hour').innerHTML = `${24}`;
+        document.getElementById('main-hour').innerHTML = `${23}`;
+        document.getElementById('back-up-hour').innerHTML = `${23}`;
     }
     document.getElementById('front-up-hour').innerHTML = `${timeHours}`;
     document.getElementById('low-hour').innerHTML = `${timeHours}`;
