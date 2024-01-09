@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+:root{
+    --Grayish-blue: hsl(237, 18%, 59%) ;
+    --Soft-red: hsl(345, 95%, 68%); 
+    --White : hsl(0, 0%, 100%) ;
+    --Dark-desaturated-blue: hsl(236, 21%, 26%) ;
+    --Very-dark-blue: hsl(235, 16%, 14%) ;
+    --Very-dark: hsl(234, 17%, 12%) ;
+}
+body{
+    font-family: 'Red Hat Text', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Very-dark-blue);
+    background-image: url(../images/bg-stars.svg);
+    background-size: cover;
+    overflow: hidden;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .content{
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.content h1{
+    font-size: 28px;
+    letter-spacing: 5px;
+    color: var(--White);
+    text-transform: uppercase;
+}
+.content .timer{
+    width: 600px;
+    height: 200px;
+}
+.mountains{
+    width: 100%;
+    position: relative;
+}
+.mountains img{
+    width: 100%;
+}
+.social{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.social a{
+    color: var(--Grayish-blue);
+    transition: .3s;
+}
+.social a:hover{
+    color: var(--Soft-red);
+}
+
+.timer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.sec,.min,.hou,.day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.seco,.minu,.hour,.days{
+    color: var(--Grayish-blue);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* timer */
+.count-down{
+    width: 115px;
+    height: 100px;
+    background-color: var(--Dark-desaturated-blue);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 8px 0px 0px var(--Very-dark-blue);
+}
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 50%;
+    perspective: 1000px;
+    z-index: 123;
+    border-radius: 5px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* transition: transform 0.6s; */
+    transform-style: preserve-3d;
+    transform: rotateX(360deg);
+    transform-origin: bottom;
+    border-radius: 5px;
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+.flip-card-front {
+    background-color: var(--Dark-desaturated-blue);
+    color: black;
+}
+
+.flip-card-back {
+    background-color: var(--Dark-desaturated-blue);
+    color: white;
+    transform: rotateY(180deg);
+}
+/* .count-down:hover .flip-card-inner {
+    transform: rotateX(180deg);
+} */
+.flip-card-inner span{
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    border-radius: 5px;
+}
+.flip-card-front,.flip-card-back{
+    overflow: hidden;
+}
+.flip-card-front span{
+    transform: translate(-50%, 50%);
+    color: var(--Soft-red);
+}
+.flip-card-back span{
+    transform-origin: center;
+    transform: rotateZ(180deg)  translate(50%, -50%);
+    color: var(--Soft-red);
+}
+.mainnum{
+    position: absolute;
+    background-color:var(--Dark-desaturated-blue);
+    width: 100%;
+    height: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.mainnum span{
+    font-size: 50px;
+    color: var(--Soft-red);
+    left: 50%;
+    bottom: 0%;
+    position: absolute;
+    transform: translate(-50%,50%);
+}
+.lower{
+    background-color: var(--Dark-desaturated-blue);
+    width: 100%;
+    height: 50%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.lower-num{
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--Soft-red);
+}
+.shado{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(38, 40, 61, 0.281);
+    height: 100%;
+}
+.shado-main{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(38, 40, 61, 0.281);
+    height: 50%;
+    z-index: 3;
+}
+
+@keyframes flip {
+    0%{
+        transform: rotateX(360deg);
+    }
+    100%{
+        transform: rotateX(180deg);
+    }
+}
+
+@media (max-width: 500px) {
+    .container{
+        overflow: hidden;
+    }
+    .content h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    .content .timer{
+        width: 90%;
+    }
+    .mountains img{
+        width: 250%;
+    }
+    .seco,.minu,.hour,.days{
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    /* timer */
+    .count-down{
+        width: 100%;
+        height: 73px;
+    }
+    .flip-card-inner span{
+        font-size: 40px;
+    }
+    .mainnum span{
+        font-size: 40px;
+    }
+    .lower-num{
+        font-size: 40px;
+    }
+    .sec,.min,.hou,.day{
+        width: calc(90% / 4);
+    }
+}

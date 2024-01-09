@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Launch countdown timer</title>
+  <!-- google fonts links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+  <!-- font awesome link -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <!-- css file link -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>we're lanching soon</h1>
+      <div class="timer">
+        <div class="sec">
+          <div class="count-down">
+            <div class="flip-card">
+                <div id="flip-sec" class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <span id="front-up-sec"></span>
+                        <div class="shado"></div>
+                    </div>
+                    <div class="flip-card-back">
+                        <span id="back-up-sec"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="lower">
+                <span class="lower-num" id="low-sec"></span>
+            </div>
+            <div class="mainnum"><span id="main-sec"></span></div>
+            <div class="shado-main"></div>
+        </div>
+        <span class="seco">SECONDS</span>
+      </div>
+      <div class="min">
+        <div class="count-down">
+          <div class="flip-card">
+              <div id="flip-min" class="flip-card-inner">
+                  <div class="flip-card-front">
+                      <span id="front-up-min"></span>
+                      <div class="shado"></div>
+                  </div>
+                  <div class="flip-card-back">
+                      <span id="back-up-min"></span>
+                  </div>
+              </div>
+          </div>
+          <div class="lower">
+              <span class="lower-num" id="low-min"></span>
+          </div>
+          <div class="mainnum"><span id="main-min"></span></div>
+          <div class="shado-main"></div>
+      </div>
+      <span class="minu">MINUTES</span>
+    </div>
+    <div class="hou">
+      <div class="count-down">
+        <div class="flip-card">
+            <div id="flip-hour" class="flip-card-inner">
+                <div class="flip-card-front">
+                    <span id="front-up-hour"></span>
+                    <div class="shado"></div>
+                </div>
+                <div class="flip-card-back">
+                    <span id="back-up-hour"></span>
+                </div>
+            </div>
+        </div>
+        <div class="lower">
+            <span class="lower-num" id="low-hour"></span>
+        </div>
+        <div class="mainnum"><span id="main-hour"></span></div>
+        <div class="shado-main"></div>
+    </div>
+    <span class="hour">HOURS</span>
+  </div>
+  <div class="day">
+    <div class="count-down">
+      <div class="flip-card">
+          <div id="flip-day" class="flip-card-inner">
+              <div class="flip-card-front">
+                  <span id="front-up-day"></span>
+                  <div class="shado"></div>
+              </div>
+              <div class="flip-card-back">
+                  <span id="back-up-day"></span>
+              </div>
+          </div>
+      </div>
+      <div class="lower">
+          <span class="lower-num" id="low-day"></span>
+      </div>
+      <div class="mainnum"><span id="main-day"></span></div>
+      <div class="shado-main"></div>
+  </div>
+  <span class="days">DAYS</span>
+</div>
+      </div>
+    </div>
+    <div class="mountains">
+      <img src="./images/pattern-hills.svg" alt="mountains">
+      <div class="social">
+        <a target="_blank" href="https://www.facebook.com/omarMF74"><i class="fa-brands fa-square-facebook  fa-2x"></i></a>
+        <a target="_blank" href="#"><i class="fa-brands fa-square-pinterest fa-2x"></i></a>
+        <a target="_blank" href="https://www.instagram.com/omar_mfarrag/"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
+      </div>
+    </div>
+  </div>
+  <script src="./scrip.js"></script>
+</body>
+</html>
