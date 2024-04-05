@@ -1,5 +1,5 @@
 const  countDown = () => {
-    let theDate = new Date("1/25/2024").getTime() // MM/DD/YYY formating
+    let theDate = new Date("5/25/2024").getTime() // MM/DD/YYY formating
     let now = new Date().getTime();
     // to get the diffrence between tow dates
     let diff = theDate - now;
